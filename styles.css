@@ -10,24 +10,14 @@ footer, header, hgroup, menu, nav, section {
     display: block;
 }
 
-html {
-    font-size: 16px;
-}
-
-ol, ul {
-    list-style: none;
-}
-
-a {
-    text-decoration: none;
-}
+html {font-size: 16px;}
+ol, ul {list-style: none;}
+a {text-decoration: none;}
 
 /* Header */
-
 .header {
     padding: 20px;
     color: #FF96AA;
-    font-family: "Montserrat", Sans-serif, serif;
     font-size: 17px;
     font-weight: 500;
     line-height: 1em;
@@ -121,30 +111,11 @@ a {
     display: block;
 }
 
-.header__icon-gb {
+.header__icon-flag {
     display: inline-block;
     width: 20px;
     height: 15px;
     margin-right: 5px;
-    background-image: url('img/united-kingdom.png');
-    background-size: cover;
-}
-
-.header__icon-he {
-    display: inline-block;
-    width: 20px;
-    height: 15px;
-    margin-right: 5px;
-    background-image: url('img/israel.png');
-    background-size: cover;
-}
-
-.header__icon-gr {
-    display: inline-block;
-    width: 20px;
-    height: 15px;
-    margin-right: 5px;
-    background-image: url('img/german.png');
     background-size: cover;
 }
 
@@ -173,7 +144,6 @@ a {
     display: grid;
     grid-template-columns: 50% 50%;
     gap: 20px;
-    font-family: "Montserrat", Sans-serif, serif;
 }
 
 .section__1 H1 {
@@ -229,7 +199,7 @@ a {
     transform: scale(110%);
 }
 
-.section__1-secondcol{
+.section__testimonial{
     position: relative;
     padding: 80px 1em 10px 1em;
     font-size: 22px;
@@ -280,7 +250,6 @@ a {
     display: grid;
     grid-template-rows: repeat(4, auto);
     grid-template-columns: repeat(9, 12%);
-    font-family: "Montserrat", Sans-serif, serif;
 }
 
 .section__2-title{
@@ -440,18 +409,122 @@ a {
 }
 
 /*Section 5*/
+/*.section__5 div {*/
+/*    border: #0F213A 1px solid;*/
+/*    min-height: 50px;*/
+/*}*/
+.section__5 {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.2em;
+    letter-spacing: 0.5px;
+}
+
+.section__5 h2{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 1em;
+    letter-spacing: 0.3px;
+}
+
+.section__5 h1{
+    font-size: 90px;
+    line-height: 1.1;
+    color: #ff96aa;
+}
+
+.section__5 h3{
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.2em;
+    letter-spacing: 0.5px;
+}
 
 .section__5-container{
+    background-color: rgb(253, 245, 247);
     margin: 0 auto;
     width: 70%;
     max-width: 1200px;
     display: grid;
-    justify-content: center;
+    gap: 10px;
+    padding: 25px;
+    grid-template:
+            "r1 r1 r1 s s"
+            "r2 r2 r2 s s"
+            "r3 r3 r3 s s"
+            "r4 r4 r4 s s"
+            "r5 r5 r5 s s" / 1fr 1fr 1fr 1fr 1fr;
 }
-.section__5-container img{
-    width: 100%;
-    height: auto;
-    max-width: 1180px;
+.section__5-item{
+    display: flex;
+    margin-right: 40px;
+}
+
+.section__5-item img{
+    height: 40px;
+    width: auto;
+    /*max-height: 25px;*/
+    margin: 0 20px 20px 20px;
+}
+
+.section__5-desc {
+    display: inline-block;
+}
+
+.section__5-item-1{
+    grid-area: r1;
+}
+.section__5-item-2{
+    grid-area: r2;
+}
+.section__5-item-3{
+    grid-area: r3;
+}
+.section__5-item-4{
+    grid-area: r4;
+}
+.section__5-item-5{
+    grid-area: r5;
+}
+
+.section__5-item-6{
+    grid-area: s;
+}
+
+.section__5-button{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.2em;
+    letter-spacing: 0.5px;
+    color: white;
+    background-color: #ff96aa;
+    border-radius: 50px 50px 50px 50px;
+    padding: 20px 30px 20px 30px;
+    width: fit-content;
+    margin-top: 30px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.section__5-button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.section__5-button:hover::after {
+    opacity: 0.3;
+}
+
+.section__5-button:hover {
+    transform: scale(110%);
 }
 
 /*Section 6*/
